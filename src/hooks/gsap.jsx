@@ -40,8 +40,52 @@ export const useGsapDownStager = (arr, delay = 0) => {
         opacity: 1,
         duration: 1.5,
         stagger: 0.125,
-        ease: Expo.easeInOut,
+        ease: Expo.easeIn,
         delay: delay,
+      }
+    );
+  }, []);
+};
+
+export const useGsapPhotoDropping = (arr) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: "-100vh",
+        scale: 0,
+      },
+      {
+        y: 0,
+        scale: 1,
+        duration: 1.5,
+        stagger: 0.3,
+        delay: 2.7,
+        ease: Expo.easeInOut,
+      }
+    );
+  }, []);
+};
+
+export const useGsapPhotoLevitate = (arr, trig) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: 0,
+      },
+      {
+        y: "-50%",
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          scrub: 1,
+          toggleActions: "play reverse play reverse",
+        },
       }
     );
   }, []);

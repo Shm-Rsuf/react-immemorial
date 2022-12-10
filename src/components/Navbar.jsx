@@ -14,9 +14,9 @@ const Navbar = () => {
   const fabArr = [febRef];
   const logoArr = [logoRef];
 
-  useGsapDownStager(liArr, 0.75);
-  useGsapDownStager(logoArr, 1.25);
-  useGsapDownStager(fabArr, 1.575);
+  useGsapDownStager(liArr, 0.9);
+  useGsapDownStager(logoArr, 1.5);
+  useGsapDownStager(fabArr, 1.8);
 
   return (
     <nav className="navbar wrapper">
