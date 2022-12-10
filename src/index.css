@@ -86,7 +86,7 @@ section {
 
 .links a:hover::after,
 .favourite-link a:hover::after {
-  width: 110%;
+  width: 120%;
 }
 
 .logo a {
