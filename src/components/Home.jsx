@@ -1,9 +1,11 @@
+import Featured from "./Featured";
 import Hero from "./Hero";
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <Featured />
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi sint
         ad harum amet dignissimos deserunt soluta vero quia, iste aspernatur
