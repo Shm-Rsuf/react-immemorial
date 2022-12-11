@@ -137,3 +137,79 @@ export const useGsapFeatureRightShutterUnvail = (item, trig) => {
     );
   }, []);
 };
+
+export const useGsapGalleryImage = (item) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: 0,
+        width: 0,
+      },
+      {
+        x: "30%",
+        width: "100%",
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: el,
+          start: "top center",
+          end: "bottom ",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapGalleryTitle = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: "30%",
+      },
+      {
+        x: 0,
+
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom ",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapGalleryCategory = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: "-110vw",
+      },
+      {
+        x: 0,
+
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom ",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
