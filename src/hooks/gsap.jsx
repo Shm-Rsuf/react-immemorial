@@ -214,6 +214,45 @@ export const useGsapGalleryCategory = (item, trig) => {
   }, []);
 };
 
+export const useGsapNotFoundHeading = (item, vw = "-100vw") => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: vw,
+      },
+      {
+        x: 0,
+        duration: 1.5,
+        ease: Expo.easeInOut,
+      }
+    );
+  }, []);
+};
+
+export const useGsapNotFoundImage = (item) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        scale: 0,
+        borderRadius: "50%",
+      },
+      {
+        scale: 1,
+        borderRadius: 0,
+        duration: 4,
+        delay: 1,
+        ease: "elastic",
+      }
+    );
+  }, []);
+};
+
 export const useGsapFooterHeading = (item, trig) => {
   useEffect(() => {
     const el = item.current;

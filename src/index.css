@@ -279,6 +279,46 @@ section {
   height: 100vh;
 }
 
+/******** Not Found Design *********/
+.not-found {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: flex-start;
+  column-gap: 5vw;
+  row-gap: 2vw;
+  padding: 5vw 0;
+}
+
+.heading-one,
+.heading-two {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 8vw;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.img-one,
+.img-two {
+  width: 20vw;
+  height: 20vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-one img,
+.img-two img {
+  width: 100%;
+  display: block;
+}
+
+.img-two {
+  justify-self: flex-end;
+}
+/******* Footer Design *******/
 .footer {
   text-align: center;
 }

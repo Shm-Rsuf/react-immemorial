@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/blog" element={<Blog />} needFullheight={true} />
-        <Route path="*" element={<NotFound />} needFullheight={true} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
