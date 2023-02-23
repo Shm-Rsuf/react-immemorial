@@ -11,6 +11,16 @@
   --color-lighter: #f5f0ec;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 15%;
+  background-color: var(--color-primary);
+  border-radius: 50px;
+}
+
 * {
   margin: 0;
   padding: 0;
